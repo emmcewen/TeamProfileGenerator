@@ -2,13 +2,13 @@ class Employee{
  constructor(name,id,email){
     this.name=name
     this.id=id
-    this.emaiil=email
+    this.email=email
  }
 getName(){
     return this.name
 }
 getId(){
-    return id.name
+    return this.id
 }
 
 getEmail(){
