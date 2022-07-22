@@ -50,8 +50,8 @@ const engineerQuestions = [
 
     {
         type: "inupt",
-        message: "What is the Engineer office number?",
-        name: "engineerOfficeNumber"
+        message: "What is the Engineer github?",
+        name: "engineerGithub"
     },
 
 ]
@@ -74,8 +74,8 @@ const internQuestions = [
 
     {
         type: "inupt",
-        message: "What is the Intern's office number?",
-        name: "internOfficeNumber"
+        message: "What is the Intern's github?",
+        name: "internGithub"
     },
 ]
 
@@ -86,7 +86,7 @@ function init() {
             response.managerId,
             respsonse.managerEmail,
             response.managerOfficeNumber
-        )
+        
             employeeArray.push(manager)
             confirmNext()
         })
@@ -100,7 +100,7 @@ function confirmNext(){
     }])
 }
 
-    .then(response =>{
+    then(response =>{
         if(addMore===true){
             addEmployee()
         }
@@ -109,10 +109,39 @@ function confirmNext(){
         createHTML() 
     }
     })
+
+
+function addEmployee(){
+    inquirer.prompt([{
+        type:"list",
+        message:"Do you want to add Engineer or Intern",
+        choices:["Engineer","Intern"],
+        name:"selection"
+    }])
+    .then(response =>{
+        if(response.selection==="Engineer"){
+            addEngineer()
+        }
+        else{
+            addIntern()
+        }
+    })
 }
-function addEmployee()
+function addEngineer(){
+ inquirer.prompt(engineerQuestions)
+ .then(response=>{
 
+ })
+}
+
+function addIntern(){
+    inquirer.prompt(internQuestions)
+    .then(response=>{
+   
+    })
+
+}
 function createHTML(){
-
+console.log(employeeArray)
 }
 init()
