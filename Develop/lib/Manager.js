@@ -9,4 +9,4 @@ class Manager extends Employee {
     }
 }
 
-modules.exports=Employee
+module.exports=Manager
