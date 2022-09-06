@@ -147,7 +147,11 @@ function addIntern() {
         })
 
 }
-function createHTML() {
-    console.log(employeeArray)
+function finishBuild() {
+    fs.writeFileSync (
+        path.join (path.resolve (__dirname,"dist"),"index.html"),
+        generateHTML(employeeArray),
+    )
+    console.log("Team Profile Generated")
 }
 init()
