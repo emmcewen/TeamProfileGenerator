@@ -1,6 +1,3 @@
-function generateHTML() {
-
-}
 
 const generateManager = function (manager) {
     return `
@@ -105,4 +102,4 @@ const generateTeamProfile = function (employeeCards){
                         `;
                         }
                         
-                        module.exports=generateHTML;
+                        module.exports = generateHTML;
