@@ -147,7 +147,7 @@ function addIntern() {
         })
 
 }
-function finishBuild() {
+function renderHTML() {
     fs.writeFileSync (
         path.join (path.resolve (__dirname,"dist"),"index.html"),
         generateHTML(employeeArray),
