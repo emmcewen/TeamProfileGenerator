@@ -7,7 +7,7 @@ The user is prompted to enter the information about their team member and hit en
 
 
 # Screenshot of the app
-![Image of app](/Assets/TeamProfileHTML.png"Team Profile Generator")
+![Image of app](/Assets/TeamProfileHTML.png)
 
 # Video Walk through 
 
